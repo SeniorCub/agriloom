@@ -11,6 +11,7 @@ export default function HomePage() {
 
   return (
     <div className="relative h-screen">
+     // TODO:
       {/* position the  get started button on  top Left corner of page */}
        {/*For Easy Navigation we can have a buttom nav bar with all the  pages */}
        {/* we can have home , about , etc  on the buttom nav   */}
