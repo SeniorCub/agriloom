@@ -11,12 +11,20 @@ export default function HomePage() {
 
   return (
     <div className="relative h-screen">
-     // TODO:
       {/* position the  get started button on  top Left corner of page */}
        {/*For Easy Navigation we can have a buttom nav bar with all the  pages */}
        {/* we can have home , about , etc  on the buttom nav   */}
        {/*look how it was done here https://davamen-energy.vercel.app/*/}
        {/**code https://github.com/debianchef/Davamen-Energy.git */}
+        
+        {/* TODO: Implement the following features:
+        1. Design and add main content for the home page , about , etc 
+       2. Add a bottom navigation bar for easy page navigation
+           - Include links to Home, About, and other main pages
+           - Reference: https://davamen-energy.vercel.app/
+           - GitHub repo: https://github.com/debianchef/Davamen-Energy.git
+       
+      */}
       <button 
         onClick={handleGetStarted}
         className="absolute top-4 left-4 flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white 

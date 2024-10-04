@@ -11,14 +11,13 @@ import Dashboard from '../dashboard/page';
 
 export default function authHome() {
   const { address } = useAccount();
-  //  This file contains both the login and signup logic
-  //  1. when a user signs up , it should navigate to the dashboard
-  //  2. When a user Clicks on signup , it should navigate to a page to collect their details 
-  //  3. after , it should navigate to Dashboard
-  // The login is straight forward and we can keep here since user only needs to click  and
-  // they are sent to dash board .
-  // The SignUp logic should also move to src/app/auth/sign_up
-
+  //  This file contains both the login and signup button
+ // TODO:
+// 1. When a user signs up, it should navigate to the dashboard
+// 2. When a user clicks on signup, it should navigate to a page to collect their details
+// 3. After collecting details, it should navigate to Dashboard
+// 4. Keep the login logic here since it's straightforward (user clicks and is sent to dashboard)
+// 5. Move the SignUp logic to src/app/auth/sign_up
   return (
     <div className="flex h-full w-96 max-w-full flex-col px-1 md:w-[1008px]">
       <section className="mt-6 mb-6 flex w-full flex-col md:flex-row">
