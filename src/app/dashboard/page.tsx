@@ -2,8 +2,9 @@
 import React, { useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { ArrowDown, ArrowUp, Users, DollarSign, ShoppingCart } from 'lucide-react';
-import {Sidebar} from './dasboardComponents/Examplesidebar';
-import {Card , CardHeader ,CardTitle, CardContent } from './dasboardComponents/Examplecard';
+import { Sidebar } from './dasboardComponents/Sidebar';
+import { TrendingProductsSidebar } from './dasboardComponents/ProductPanel'; 
+import { Card, CardHeader, CardTitle, CardContent } from './dasboardComponents/Examplecard';
 type Metric = {
   title: string;
   value: number;
@@ -15,6 +16,7 @@ type DataPoint = {
   name: string;
   value: number;
 };
+
 
 const metrics: Metric[] = [
   { title: "Total Users", value: 2453, change: 12.5, icon: <Users className="h-4 w-4" /> },
@@ -61,9 +63,6 @@ const DashboardContent: React.FC = () => (
         </Card>
       ))}
     </div>
-
-  
-      
   </>
 );
 
@@ -80,9 +79,9 @@ const Dashboard: React.FC = () => {
         return <div className="text-xl">Orders and Transactions</div>;
       case "Financing":
         return <div className="text-xl">Financing</div>;
-        case "Notifications":
-          return <div className="text-xl">Notifications</div>;
-        case "Settings":
+      case "Notifications":
+        return <div className="text-xl">Notifications</div>;
+      case "Settings":
         return <div className="text-xl">Settings</div>;
       default:
         return null;
@@ -90,13 +89,16 @@ const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen">
       <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
-      <div className="flex-1 overflow-hidden">
-        <div className="p-8">
+      <div className="flex-1 flex overflow-hidden">
+        <div className="p-8 w-full  bg-gray-100">
           <h2 className="text-2xl font-bold mb-4">{activeTab}</h2>
           {renderContent()}
         </div>
+      </div>
+      <div className="w-1/4 p-4">
+        <TrendingProductsSidebar />
       </div>
     </div>
   );
