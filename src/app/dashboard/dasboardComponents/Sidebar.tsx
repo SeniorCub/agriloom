@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { LayoutDashboard, Settings, FileText, Bell } from 'lucide-react';
 
