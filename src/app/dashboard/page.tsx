@@ -1,10 +1,11 @@
+
 'use client';
 import React, { useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { ArrowDown, ArrowUp, Users, DollarSign, ShoppingCart } from 'lucide-react';
-import { Sidebar } from './dasboardComponents/Sidebar';
-import { TrendingProductsSidebar } from './dasboardComponents/ProductPanel'; 
-import { Card, CardHeader, CardTitle, CardContent } from './dasboardComponents/Examplecard';
+import { Sidebar } from '../components/Sidebar';
+import { TrendingProductsSidebar } from '../components/ProductPanel'; 
+import { Card, CardHeader, CardTitle, CardContent } from '../components/Examplecard';
 type Metric = {
   title: string;
   value: number;
