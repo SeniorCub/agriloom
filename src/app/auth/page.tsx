@@ -3,7 +3,7 @@ import Footer from 'src/components/Footer';
 import TransactionWrapper from 'src/components/TransactionWrapper';
 import WalletWrapper from 'src/components/WalletWrapper';
 import { ONCHAINKIT_LINK } from 'src/utils/links';
-import OnchainkitSvg from 'src/svg/OnchainkitSvg';
+import OnchainkitSvg from 'src/images/svg/OnchainkitSvg';
 import { useAccount } from 'wagmi';
 import LoginButton from '../../components/LoginButton';
 import SignupButton from '../../components/SignupButton';

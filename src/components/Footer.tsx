@@ -7,7 +7,7 @@ import {
   ONCHAINKIT_LINK,
   TWITTER_LINK,
 } from 'src/utils/links';
-import ArrowSvg from 'src/svg/ArrowSvg';
+import ArrowSvg from 'src/images/svg/ArrowSvg';
 
 const docLinks = [
   { href: ONCHAINKIT_LINK, title: 'Docs' },
