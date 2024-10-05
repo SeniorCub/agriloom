@@ -23,7 +23,6 @@ export default function HomePage() {
            - Include links to Home, About, and other main pages
            - Reference: https://davamen-energy.vercel.app/
            - GitHub repo: https://github.com/debianchef/Davamen-Energy.git
-       
       */}
       <button 
         onClick={handleGetStarted}
