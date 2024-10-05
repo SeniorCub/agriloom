@@ -8,7 +8,7 @@ import {
 import { useMemo } from 'react';
 import { http, createConfig } from 'wagmi';
 import { base, baseSepolia } from 'wagmi/chains';
-import { NEXT_PUBLIC_WC_PROJECT_ID } from './config';
+import { NEXT_PUBLIC_WC_PROJECT_ID } from '../utils/config';
 
 export function useWagmiConfig() {
   const projectId = NEXT_PUBLIC_WC_PROJECT_ID ?? '';

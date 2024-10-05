@@ -15,7 +15,7 @@ import {
   BASE_SEPOLIA_CHAIN_ID,
   mintABI,
   mintContractAddress,
-} from '../constants';
+} from '../web3Connectors/constants';
 
 export default function TransactionWrapper({ address }: { address: Address }) {
   const contracts = [

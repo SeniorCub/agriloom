@@ -6,7 +6,7 @@ import {
   GITHUB_LINK,
   ONCHAINKIT_LINK,
   TWITTER_LINK,
-} from 'src/links';
+} from 'src/utils/links';
 import ArrowSvg from 'src/svg/ArrowSvg';
 
 const docLinks = [

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { NEXT_PUBLIC_URL } from '../config';
+import { NEXT_PUBLIC_URL } from '../utils/config';
 
 import './global.css';
 import '@coinbase/onchainkit/styles.css';

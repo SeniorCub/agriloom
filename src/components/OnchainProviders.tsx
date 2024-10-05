@@ -5,8 +5,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import { base } from 'viem/chains';
 import { WagmiProvider } from 'wagmi';
-import { NEXT_PUBLIC_CDP_API_KEY } from '../config';
-import { useWagmiConfig } from '../wagmi';
+import { NEXT_PUBLIC_CDP_API_KEY } from '../utils/config';
+import { useWagmiConfig } from '../web3Connectors/wagmi';
 
 type Props = { children: ReactNode };
 
