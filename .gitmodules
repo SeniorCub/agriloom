@@ -1,0 +1,12 @@
+[submodule "contracts/PaymentGateWay/lib/forge-std"]
+	path = contracts/PaymentGateWay/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "contracts/lib/toolkit"]
+	path = contracts/lib/toolkit
+	url = https://github.com/zeta-chain/toolkit.git
+[submodule "contracts/lib/protocol-contracts"]
+	path = contracts/lib/protocol-contracts
+	url = https://github.com/zeta-chain/protocol-contracts.git
+[submodule "contracts/lib/v2-periphery"]
+	path = contracts/lib/v2-periphery
+	url = https://github.com/Uniswap/v2-periphery.git
