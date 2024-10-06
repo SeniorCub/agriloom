@@ -4,7 +4,7 @@ import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'rec
 import { ArrowDown, ArrowUp, Users, DollarSign, ShoppingCart } from 'lucide-react';
 import { Sidebar } from './dasboardComponents/Sidebar';
 import { TrendingProductsSidebar } from './dasboardComponents/ProductPanel'; 
-import { Card, CardHeader, CardTitle, CardContent } from './dasboardComponents/Examplecard';
+import { Card, CardHeader, CardTitle, CardContent } from './dasboardComponents/card';
 type Metric = {
   title: string;
   value: number;
@@ -89,18 +89,36 @@ const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="flex h-screen">
-      <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
-      <div className="flex-1 flex overflow-hidden">
-        <div className="p-8 w-full  bg-gray-100">
-          <h2 className="text-2xl font-bold mb-4">{activeTab}</h2>
-          {renderContent()}
-        </div>
-      </div>
-      <div className="w-1/4 p-4">
-        <TrendingProductsSidebar />
-      </div>
+    
+    <div className="flex h-screen   marginTop: '3rem'">
+    <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
+    <div className="flex-1 p-8">
+   
+  <div style={{
+  backgroundColor: 'white',
+  borderRadius: '0.5rem',
+  padding: '1.5rem',
+  width: '100vw',
+  height: '100vh',
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  zIndex: 40
+}}>
+ <h2 style={{ fontSize: '1.5rem',
+   fontWeight: 'bold',
+    marginBottom: '1rem',
+     marginLeft: '220px' }}>{activeTab}</h2>
+
+ <div style={{ marginLeft: '220px', 
+  marginTop: '6rem' }}>{renderContent()}</div>
+</div>
+
     </div>
+  </div>
+
+     
+    
   );
 };
 

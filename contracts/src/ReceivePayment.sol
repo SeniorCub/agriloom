@@ -17,7 +17,7 @@ contract Receive is GateWay {
  * @param _amount The amount of funds sent to the contract.
  * @param _message The message sent to the contract.
  */
-     function ProcessPayment( uint256 _amount)  {
+     function ProcessPayment( uint256 _amount) external {
      //TODO : handle message data
      //TODO: add security checks
      emit PaymentReceived(msg.sender, _amount);
