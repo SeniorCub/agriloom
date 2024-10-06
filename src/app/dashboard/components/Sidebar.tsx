@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { LayoutDashboard, Settings, FileText, Bell, DollarSign, File} from 'lucide-react';
+import { LayoutDashboard, Settings, FileText, Bell, DollarSign, File } from 'lucide-react';
 
 type NavItem = {
   name: string;
@@ -13,22 +13,13 @@ type SidebarProps = {
 };
 
 const navItems: NavItem[] = [
-  { name: "Dashboard", icon: <LayoutDashboard className="h-5 w-5" /> },
-  { name: "Inventory", icon: <FileText className="h-5 w-5" /> },
-  { name: "Orders and Transactions", icon: <File className="h-5 w-5" /> },
-  { name: "Financing", icon: <DollarSign className="h-5 w-5" /> },
-  { name: "Notifications", icon: <Bell className="h-5 w-5" /> },
-  { name: "Settings", icon: <Settings className="h-5 w-5" /> },
+  { name: "Dashboard", icon: <LayoutDashboard className="h-5 w-5 text-blue-500" /> },
+  { name: "Inventory", icon: <FileText className="h-5 w-5 text-blue-500" /> },
+  { name: "Orders and Transactions", icon: <File className="h-5 w-5 text-blue-500" /> },
+  { name: "Financing", icon: <DollarSign className="h-5 w-5 text-blue-500" /> },
+  { name: "Notifications", icon: <Bell className="h-5 w-5 text-blue-500" /> },
+  { name: "Settings", icon: <Settings className="h-5 w-5 text-blue-500" /> },
 ];
-
-
-/* Sidebar component
- * Renders a sidebar with navigation items
- * Props:
- * - activeTab: string - the currently active tab
- * - onTabChange: function - callback to handle tab changes
- */
-
 
 export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange }) => {
   return (
@@ -42,10 +33,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange }) => {
       position: 'fixed',
       zIndex: 50
     }}>
-    
-      
       <div className="p-4">
-        <h1 className="text-xl font-bold mb-8">Agro Loom</h1>
+        <h1 className="text-xl font-bold mb-8 text-white">Agro Loom</h1>
         <nav className="mt-4">
           {navItems.map((item) => (
             <button
@@ -54,7 +43,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange }) => {
               className={`w-full flex items-center p-3 mb-2 rounded-lg text-left
                 ${activeTab === item.name 
                   ? 'bg-blue-100 text-green-600' 
-                  : 'text-green-300 hover:bg-gray-100'}`}
+                  : 'text-green-300 hover:bg-gray-700 hover:text-white'}`} // Updated hover styles
             >
               {item.icon}
               <span className="ml-3">{item.name}</span>
