@@ -6,6 +6,7 @@ import { ArrowDown, ArrowUp, Users, DollarSign, ShoppingCart } from 'lucide-reac
 import { Sidebar } from '../components/Sidebar';
 import { TrendingProductsSidebar } from '../components/ProductPanel'; 
 import { Card, CardHeader, CardTitle, CardContent } from '../components/Examplecard';
+import Inventory from '../modules/Inventory';
 type Metric = {
   title: string;
   value: number;
@@ -62,6 +63,7 @@ const DashboardContent: React.FC = () => (
             </p>
           </CardContent>
         </Card>
+        
       ))}
     </div>
   </>
@@ -75,7 +77,7 @@ const Dashboard: React.FC = () => {
       case "Dashboard":
         return <DashboardContent />;
       case "Inventory":
-        return <div className="text-xl">Inventory</div>;
+        return <Inventory/>
       case "Orders and Transactions":
         return <div className="text-xl">Orders and Transactions</div>;
       case "Financing":
@@ -90,7 +92,8 @@ const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="flex h-screen">
+    
+    <div className="flex h-screen mt-10 ">
       <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
       <div className="flex-1 flex overflow-hidden">
         <div className="p-8 w-full  bg-gray-100">
@@ -99,7 +102,7 @@ const Dashboard: React.FC = () => {
         </div>
       </div>
       <div className="w-1/4 p-4">
-        <TrendingProductsSidebar />
+      <button className=''>Add Product</button>
       </div>
     </div>
   );
