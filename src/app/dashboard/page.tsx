@@ -3,10 +3,10 @@
 import React, { useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { ArrowDown, ArrowUp, Users, DollarSign, ShoppingCart } from 'lucide-react';
-import { Sidebar } from '../components/Sidebar';
-import { TrendingProductsSidebar } from '../components/ProductPanel'; 
-import { Card, CardHeader, CardTitle, CardContent } from '../components/Examplecard';
-import Inventory from '../modules/Inventory';
+import { Sidebar } from './components/Sidebar';
+import { TrendingProductsSidebar } from './components/ProductPanel'; 
+import { Card, CardHeader, CardTitle, CardContent } from './components/Examplecard';
+import Inventory from './modules/Inventory';
 type Metric = {
   title: string;
   value: number;
