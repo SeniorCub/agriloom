@@ -1,10 +1,12 @@
+
 'use client';
 import React, { useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { ArrowDown, ArrowUp, Users, DollarSign, ShoppingCart } from 'lucide-react';
-import { Sidebar } from './dasboardComponents/Sidebar';
-import { TrendingProductsSidebar } from './dasboardComponents/ProductPanel'; 
-import { Card, CardHeader, CardTitle, CardContent } from './dasboardComponents/card';
+import { Sidebar } from '../components/Sidebar';
+import { TrendingProductsSidebar } from '../components/ProductPanel'; 
+import { Card, CardHeader, CardTitle, CardContent } from '../components/Examplecard';
+import Inventory from '../modules/Inventory';
 type Metric = {
   title: string;
   value: number;
@@ -61,6 +63,7 @@ const DashboardContent: React.FC = () => (
             </p>
           </CardContent>
         </Card>
+        
       ))}
     </div>
   </>
@@ -74,7 +77,7 @@ const Dashboard: React.FC = () => {
       case "Dashboard":
         return <DashboardContent />;
       case "Inventory":
-        return <div className="text-xl">Inventory</div>;
+        return <Inventory/>
       case "Orders and Transactions":
         return <div className="text-xl">Orders and Transactions</div>;
       case "Financing":
