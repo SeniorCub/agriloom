@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { LayoutDashboard, Settings, FileText, Bell } from 'lucide-react';
+import { LayoutDashboard, Settings, FileText, Bell, DollarSign, File} from 'lucide-react';
 
 type NavItem = {
   name: string;
@@ -15,8 +15,8 @@ type SidebarProps = {
 const navItems: NavItem[] = [
   { name: "Dashboard", icon: <LayoutDashboard className="h-5 w-5" /> },
   { name: "Inventory", icon: <FileText className="h-5 w-5" /> },
-  { name: "Orders and Transactions", icon: <Bell className="h-5 w-5" /> },
-  { name: "Financing", icon: <Bell className="h-5 w-5" /> },
+  { name: "Orders and Transactions", icon: <File className="h-5 w-5" /> },
+  { name: "Financing", icon: <DollarSign className="h-5 w-5" /> },
   { name: "Notifications", icon: <Bell className="h-5 w-5" /> },
   { name: "Settings", icon: <Settings className="h-5 w-5" /> },
 ];
