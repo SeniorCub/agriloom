@@ -30,11 +30,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: { children: React.ReactNode }) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body className="flex items-center justify-center">
-        <OnchainProviders>{children}</OnchainProviders>
+      <body className="bg-gray-100">
+        <div className="flex h-screen overflow-hidden">
+          {children}
+        </div>
       </body>
     </html>
   );
