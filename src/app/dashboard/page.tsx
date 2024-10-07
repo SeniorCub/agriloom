@@ -7,6 +7,7 @@ import { Sidebar } from './components/Sidebar';
 import { TrendingProductsSidebar } from './components/ProductPanel'; 
 import { Card, CardHeader, CardTitle, CardContent } from './components/Examplecard';
 import Inventory from './modules/Inventory';
+import OrdersPage from './modules/Orders';
 type Metric = {
   title: string;
   value: number;
@@ -79,7 +80,7 @@ const Dashboard: React.FC = () => {
       case "Inventory":
         return <Inventory/>
       case "Orders and Transactions":
-        return <div className="text-xl">Orders and Transactions</div>;
+        return <OrdersPage/>
       case "Financing":
         return <div className="text-xl">Financing</div>;
       case "Notifications":
